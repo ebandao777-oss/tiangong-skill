@@ -108,7 +108,7 @@ python scripts/verify-skill.py [--skill path/to/SKILL.md] [--json] [--quiet]
 
 | 文档 | 用途 |
 |------|------|
-| [SKILL.md](SKILL.md) | 完整设计流程、CHECKPOINT 定义、两种范式流水线 |
-| [QUICKSTART.md](QUICKSTART.md) | 30 秒快速上手 |
-| [references/quality-system.md](references/quality-system.md) | 质量内控、规则冲突检测、反膨胀、回测验证 |
-| [assets/README.md](assets/README.md) | 静态资源使用指引 |
+| [完整设计流程](SKILL.md) | 完整设计流程、CHECKPOINT 定义、两种范式流水线 |
+| [快速上手](QUICKSTART.md) | 30 秒快速上手 |
+| [质量体系](references/quality-system.md) | 质量内控、规则冲突检测、反膨胀、回测验证 |
+| [静态资源指引](assets/README.md) | 静态资源使用指引 |

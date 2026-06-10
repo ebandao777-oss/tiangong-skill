@@ -5,8 +5,8 @@
 > 本文档聚焦输出规范：文件结构规范、五大原则、避坑指南、风格与格式指南、PR 提交模板、进阶技巧、输出格式变体。
 > 由 SKILL.md 的阶段三/四及质量检查流程按需引用。
 >
-> 📂 设计过程质量保障 → [quality-design-process.md](quality-design-process.md)
-> 📂 验证与测试 → [quality-verification.md](quality-verification.md)
+> 📂 设计过程质量保障 → [设计过程质量保障](quality-design-process.md)
+> 📂 验证与测试 → [验证与测试](quality-verification.md)
 
 ## 📁 角色定义文件结构规范
 

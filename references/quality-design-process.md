@@ -5,8 +5,8 @@
 > 本文档聚焦设计过程中的质量保障：失败回退策略、反膨胀检查、规则冲突检测、迭代优化指南。
 > 由 SKILL.md 的阶段三/四及质量检查流程按需引用。
 >
-> 📂 验证与测试 → [quality-verification.md](quality-verification.md)
-> 📂 输出规范与格式 → [quality-output-spec.md](quality-output-spec.md)
+> 📂 验证与测试 → [验证与测试](quality-verification.md)
+> 📂 输出规范与格式 → [输出规范与格式](quality-output-spec.md)
 
 ## 🛡️ 失败模式与回退策略 (Failure Modes & Fallback)
 

@@ -5,8 +5,8 @@
 > 本文档聚焦验证与测试：回测验证（五场景法）、专家级验证体系（五维度）、质量评估标准（通用+岗位型+人格型）。
 > 由 SKILL.md 的阶段三/四及质量检查流程按需引用。
 >
-> 📂 设计过程质量保障 → [quality-design-process.md](quality-design-process.md)
-> 📂 输出规范与格式 → [quality-output-spec.md](quality-output-spec.md)
+> 📂 设计过程质量保障 → [设计过程质量保障](quality-design-process.md)
+> 📂 输出规范与格式 → [输出规范与格式](quality-output-spec.md)
 
 ## 🧪 回测验证 (Regression Testing)
 
