@@ -9,6 +9,5 @@
 
 ## 使用方式
 
-- 资源文件由 `tiangong-skill` skill 在对应阶段按需读取，不随 SKILL.md 内联，避免主文件膨胀。
-- 新增资源时请更新 `README.md` 中的目录结构及附录。
-- 所有资源文件使用 UTF-8 编码，YAML/JSON 文件遵循对应规范。
+- 资源文件由 `tiangong-skill` skill 在对应阶段按需读取。
+- 新增资源后更新本 README。
