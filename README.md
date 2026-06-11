@@ -69,7 +69,7 @@ AIGC:
 | 验证脚本 | `scripts/verify-persona.py` | `scripts/verify-skill.py` |
 | 端到端示例 | — | `examples/tax-advisor-example.md` |
 
-> **拿不准走哪条路？** 打开 `SKILL.md`，搜索"🔍 快速诊断"——5 道题，2 分钟做出判断。
+> **拿不准走哪条路？** 一句判断：「它在模仿一个人，还是在承担一个岗位？」详见 `SKILL.md` 快速导航表与路由决策树。
 
 ---
 

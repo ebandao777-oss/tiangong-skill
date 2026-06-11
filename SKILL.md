@@ -364,19 +364,4 @@ metadata:
 | **J3. 技法注入** | 对身份 5 字段、关键规则、价值观优先、沟通风格、退化行为、质量标准可验证化等模块，按「填充技法」升级为高质量内容。DO 每条必须包含"具体动作 + 为什么 + 反例"三要素；身份卡"角色"字段必须含领域限定词；职业判断模型和表达DNA场景锚点必须在 J3 阶段完成填充，不得留空 | 充实后的模板 | 即时 |
 | **J4. 质量内控** | 按「质量评估标准」的岗位型专有 5 维逐条打分（≥4 维通过 = 合格）；2 维不通过 → 回退重填对应模块；3 维以上不通过 → 从 J2 重新开始。通过后跑 2 个压力场景验证不崩人设，运行 `scripts/verify-skill.py` | 通过/回退标记 | 即时 |
 | **J5. 交付** | 输出完整 SKILL.md 文件到 `output/` 目录 + 产出物声明 | 最终文件 | 即时 |
-
-> J4 通过后，运行 `scripts/verify-skill.py` 自动校验产出物的 YAML 格式、CHECKPOINT 标记和规则一致性。
-
-> [端到端示例](examples/tax-advisor-example.md)
-
-> [资源清单](README.md)
-
----
-
-> [岗位型模板](references/job-details.md) / [空白启动模板](examples/job-template.md)
-> [失败模式与回退策略](references/quality-design-process.md#🛡️-失败模式与回退策略-failure-modes--fallback)
-> [反膨胀检查清单](references/quality-design-process.md#📏-反膨胀检查清单-anti-bloat-checklist)
-> [质量体系总索引](references/quality-system.md)（设计过程、验证测试、输出规范）
-> [常见问题 FAQ](references/faq.md)
-> [运行时异常处理](references/quality-design-process.md#🔧-运行时异常处理指南)
-> [触发方式详解](references/trigger-guide.md)
+> [端到端示例](examples/tax-advisor-example.md) · [资源清单](README.md)
