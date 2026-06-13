@@ -1,12 +1,28 @@
 ---
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: f114db32c8f49bbd4c4c544cd9de808d_aa8e67c1673011f1a99c5254007bceed
-    ReservedCode1: jPkxvTCTXkmd2WGWyNN0Cv5clDXf7gKL1K9h56c3hrq1N0OcvM1sc6XiemcrHVW73vHDWykACvZG2yejdLMbyyx0xKJTF/XHN0Aisgvn5bm0L08JLv31jPp7L0l1u3WjY9K5rC8nIr14vmb0mw2RPnR0z1aolYstEGhPOyI6a85fFkjZH7YmkuOrfH0=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: f114db32c8f49bbd4c4c544cd9de808d_aa8e67c1673011f1a99c5254007bceed
-    ReservedCode2: jPkxvTCTXkmd2WGWyNN0Cv5clDXf7gKL1K9h56c3hrq1N0OcvM1sc6XiemcrHVW73vHDWykACvZG2yejdLMbyyx0xKJTF/XHN0Aisgvn5bm0L08JLv31jPp7L0l1u3WjY9K5rC8nIr14vmb0mw2RPnR0z1aolYstEGhPOyI6a85fFkjZH7YmkuOrfH0=
+name: tiangong-skill
+description: 天工.skill(Tiangong Skill)智能体设计师。当用户需要设计、创建或优化AI智能体/Agent，或基于真实人物蒸馏思维框架创建人物Skill时使用。支持两种范式：人物蒸馏（由内而外，复刻心智模型）与岗位型专家（由外而内，定义岗位职责）。目标：创建专业领域专家角色，具备清晰人设和扎实交付力。
+version: "3.0"
+trigger_words:
+  - 设计agent
+  - 创建智能体
+  - 优化智能体
+  - 做一个
+  - 帮我写个
+  - 人物蒸馏
+  - 岗位型专家
+  - 设计一个专家
+  - design agent
+  - create agent
+domain: "tiangong-skill"
+author: "智慧半岛"
+emoji: "📚"
+metadata:
+  requires:
+    bins: []
+    env: []
+    files: []
+  openclaw:
+    runtime: standalone
 ---
 
 
