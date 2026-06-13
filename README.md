@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: f114db32c8f49bbd4c4c544cd9de808d_e2feb05d64a211f1873b5254002afed2
-    ReservedCode1: gL6GwssjDtYRE+WmFsgXCK5B6ckSgAGa0IGEyyGTpoHdpJlIc40XXo0ZeCTIgYgwRMSt/4ylBFLna6ypgcipXGUvchuE4x6keHRq4qynvSpFvAUE9iur6GtfqJhU9svMymKmcRTyL4rJBHRnEJSp31sNLjxNKOz9gTu9TQww2NskkzgfecgdCDt14NE=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: f114db32c8f49bbd4c4c544cd9de808d_e2feb05d64a211f1873b5254002afed2
-    ReservedCode2: gL6GwssjDtYRE+WmFsgXCK5B6ckSgAGa0IGEyyGTpoHdpJlIc40XXo0ZeCTIgYgwRMSt/4ylBFLna6ypgcipXGUvchuE4x6keHRq4qynvSpFvAUE9iur6GtfqJhU9svMymKmcRTyL4rJBHRnEJSp31sNLjxNKOz9gTu9TQww2NskkzgfecgdCDt14NE=
----
-
 # 天工.skill
 
 > "承古法之精微，启今用之新章。"
@@ -390,4 +379,3 @@ python scripts/verify-persona.py <path/to/SKILL.md> [--json]
 | 3.0 | 2026-06 | 重构质量体系：拆分 quality-system.md 为三独立文件；引入规则冲突检测引擎；新增反模式清单独立章节；统一检查点标记为 🚦 等级体系；README.md 完整重写 |
 | 2.x | 2026-05 | 新增范式融合路径；岗位型深度结构校验 11 项；触发词五维检查表 |
 | 1.x | 2026-04 | 初始版本：两种范式、J1→J5 流水线、verify-skill.py / verify-persona.py |
-*（内容由AI生成，仅供参考）*
