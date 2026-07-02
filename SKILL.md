@@ -1,7 +1,7 @@
 ---
 name: tiangong-skill
 description: 天工.skill(Tiangong Skill)智能体设计师。当用户需要设计、创建或优化AI智能体/Agent，或基于真实人物蒸馏思维框架创建人物Skill时使用。支持两种范式：人物蒸馏（由内而外，复刻心智模型）与岗位型专家（由外而内，定义岗位职责）。目标：创建专业领域专家角色，具备清晰人设和扎实交付力。
-version: "3.0"
+version: 3.0
 trigger_words:
   - 设计agent
   - 创建智能体

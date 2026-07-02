@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: f114db32c8f49bbd4c4c544cd9de808d_e2feb05d64a211f1873b5254002afed2
-    ReservedCode1: gL6GwssjDtYRE+WmFsgXCK5B6ckSgAGa0IGEyyGTpoHdpJlIc40XXo0ZeCTIgYgwRMSt/4ylBFLna6ypgcipXGUvchuE4x6keHRq4qynvSpFvAUE9iur6GtfqJhU9svMymKmcRTyL4rJBHRnEJSp31sNLjxNKOz9gTu9TQww2NskkzgfecgdCDt14NE=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: f114db32c8f49bbd4c4c544cd9de808d_e2feb05d64a211f1873b5254002afed2
-    ReservedCode2: gL6GwssjDtYRE+WmFsgXCK5B6ckSgAGa0IGEyyGTpoHdpJlIc40XXo0ZeCTIgYgwRMSt/4ylBFLna6ypgcipXGUvchuE4x6keHRq4qynvSpFvAUE9iur6GtfqJhU9svMymKmcRTyL4rJBHRnEJSp31sNLjxNKOz9gTu9TQww2NskkzgfecgdCDt14NE=
----
-
 # 天工.skill
 
 > "承古法之精微，启今用之新章。"
