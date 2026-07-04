@@ -334,7 +334,7 @@ python scripts/verify-persona.py <path/to/SKILL.md> [--json]
 
 | 文件 | 用途 | 格式 |
 |------|------|------|
-| `assets/color-schemes.yaml` | 5 个部门（技术/产品/设计/运营/市场）的色标映射表 + 人格蒸馏专属色 | YAML 键值对 |
+| `assets/color-schemes.yaml` | 4 个部门（技术/产品/设计/运营）+ 通用色系的色标映射表 + 人格蒸馏专属色 | YAML 键值对 |
 | `assets/template-schema.json` | 岗位型/人格蒸馏产出物的统一 JSON Schema，用于程序化校验产出物结构 | JSON Schema Draft-07 |
 
 ---
@@ -379,3 +379,5 @@ python scripts/verify-persona.py <path/to/SKILL.md> [--json]
 | 3.0 | 2026-06 | 重构质量体系：拆分 quality-system.md 为三独立文件；引入规则冲突检测引擎；新增反模式清单独立章节；统一检查点标记为 🚦 等级体系；README.md 完整重写 |
 | 2.x | 2026-05 | 新增范式融合路径；岗位型深度结构校验 11 项；触发词五维检查表 |
 | 1.x | 2026-04 | 初始版本：两种范式、J1→J5 流水线、verify-skill.py / verify-persona.py |
+
+> 注：本表"版本"列记录项目发布主版本号（反映重大架构演进）。SKILL.md frontmatter 的 `version` 字段（技能加载器读取值）当前为 `1.0.8`，跟随每次小修改递增，与本表是不同维度的版本概念，不构成不一致。

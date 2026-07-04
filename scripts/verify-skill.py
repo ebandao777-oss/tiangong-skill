@@ -20,8 +20,6 @@ import re
 import sys
 from typing import Any
 
-import yaml
-
 # 共享工具函数
 from _common import (
     count_table_rows as _count_table_rows,
@@ -38,6 +36,13 @@ from _common import (
 
 
 def extract_frontmatter(text):
+    """提取 YAML frontmatter，返回 (parsed_dict, raw_str, end_line_idx)。
+
+    使用正则解析 `key: value` 对，避免引入 PyYAML 外部依赖
+    （与 verify-persona.py 的 parse_frontmatter 同款实现）。
+    多行字段（如 trigger_words 列表、metadata 嵌套）会被跳过，
+    不影响 required_fields 校验（name/description/version/domain/author 均为单行）。
+    """
     if not text.startswith("---"):
         return None, "", 0
     lines = text.split("\n")
@@ -49,7 +54,11 @@ def extract_frontmatter(text):
     if end_idx == -1:
         return None, "", 0
     raw = "\n".join(lines[1:end_idx])
-    parsed = yaml.safe_load(raw) or {}
+    parsed = {}
+    for line in lines[1:end_idx]:
+        kv = re.match(r"^(\w[\w-]*)\s*:\s*(.+?)\s*$", line)
+        if kv:
+            parsed[kv.group(1)] = kv.group(2).strip("\"' ")
     return parsed, raw, end_idx
 
 
@@ -328,8 +337,12 @@ def detect_rule_conflicts(text):
 
 
 ANTI_PATTERN_CHECKS = [
-    ("不触发条件",       "## 何时不激活",     r"^-\s+用户",  4, "list"),
-    ("蒸馏红线",         "## 🚫 反例与黑名单",        None,       4, "table"),
+    # (check_name, anchor_heading, item_pattern, expected_count, check_type)
+    # check_type="table": 统计表格行（默认匹配 `| 数字 |`；若提供 item_pattern 则改用它）
+    # check_type="list":  统计匹配 item_pattern 的列表项
+    # 锚点级别（H2/H3/H4）自动从 anchor 字符串解析，遇到同级或更高级标题即停止扫描
+    ("激活条件表格行",   "## 🔔 激活条件",          r"^\|[^:|]+", 4, "table"),
+    ("蒸馏反例条目",     "### 反例黑名单（7 条摘要）", r"^\d+\.\s",   7, "list"),
 ]
 
 
@@ -339,15 +352,29 @@ def check_anti_pattern_index(text):
     for name, anchor, item_pattern, expected, check_type in ANTI_PATTERN_CHECKS:
         in_section = False
         count = 0
+        # 解析锚点的标题级别（## → 2, ### → 3, #### → 4），决定扫描终止边界
+        anchor_level = 0
+        m = re.match(r"^(#+)\s", anchor)
+        if m:
+            anchor_level = len(m.group(1))
+        if anchor_level >= 2:
+            # 遇到同级或更高级（更小或相等的 # 数量）标题即停止
+            break_re = re.compile(r"^#{1," + str(anchor_level) + r"}\s")
+        else:
+            break_re = re.compile(r"^##\s")
+
         if check_type == "table":
+            # 默认匹配首列为数字的表格行；若提供 item_pattern 则覆盖默认
+            row_re = re.compile(item_pattern) if item_pattern else re.compile(r"\|\s*\d+\s*\|")
             for line in lines:
                 if anchor in line:
                     in_section = True
                     continue
                 if in_section:
-                    if line.startswith("## ") or (line.startswith("### ") and anchor not in line):
+                    if break_re.match(line):
                         break
-                    if line.strip().startswith("|") and re.match(r"\|\s*\d+\s*\|", line.strip()):
+                    stripped = line.strip()
+                    if stripped.startswith("|") and row_re.match(stripped):
                         count += 1
         else:
             for line in lines:
@@ -355,12 +382,9 @@ def check_anti_pattern_index(text):
                     in_section = True
                     continue
                 if in_section:
-                    if line.startswith("## "):
+                    if break_re.match(line):
                         break
-                    if anchor.startswith("#### ") and (line.startswith("### ") or line.startswith("#### ")):
-                        if anchor not in line:
-                            break
-                    if re.match(item_pattern, line.strip()):
+                    if item_pattern and re.match(item_pattern, line.strip()):
                         count += 1
         match = count == expected
         results.append({"section": name, "expected": expected, "actual": count, "match": match})

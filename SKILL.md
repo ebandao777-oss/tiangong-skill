@@ -23,6 +23,14 @@ metadata:
     files: []
   openclaw:
     runtime: standalone
+license: MIT
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
+  - Shell
+  - Edit
+  - Write
 ---
 
 
@@ -127,8 +135,8 @@ metadata:
 | **蒸馏 2** | 四重验证提取 3-7 个心智模型 → 决策启发式(5-10条) → 表达DNA → 诚实边界 | 防NPC铁律；职业合规一票否决；启发式反向验证 |
 | 🔴Gate 2 | 心智模型 3-7 / 启发式 5-10 / 表达DNA 已填充 / 诚实边界 5 条 / 内在张力 ≥1 | <3 回退蒸馏1；>7 截断；一手 <50% 标注「低可信度」 |
 | **蒸馏 3** | 元数据配置 → 使命拆解 → 护栏设定 → Agentic Protocol（问题分类/研究维度/Step1→3） | 模板详见 [persona-details.md](references/persona-details.md) |
-| **蒸馏 4** | 两轮评估（硬指标 verify-skill.py + 软指标 4 项检查） → 融合可信度测试 | 1 项不通过回退对应模块；2+ 回退蒸馏3 |
-| 🔴Gate 3 | verify-skill.py PASS / 压力测试 4 场景全过 / 置信度 <70% 断言已撤回 | 压力测试不通过 → 回退蒸馏2 |
+| **蒸馏 4** | 两轮评估（硬指标 verify-persona.py + 软指标 4 项检查） → 融合可信度测试 | 1 项不通过回退对应模块；2+ 回退蒸馏3 |
+| 🔴Gate 3 | verify-persona.py PASS / 压力测试 4 场景全过 / 置信度 <70% 断言已撤回 | 压力测试不通过 → 回退蒸馏2 |
 | **蒸馏 5** | 写入 output/ → 提供 2-3 个后续建议 | 默认直接生成，信息缺失最多 1 个澄清问题 |
 
 ### 反例黑名单（7 条摘要）

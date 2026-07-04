@@ -38,8 +38,9 @@ departments:
     label: "灰色系 - 中性专业"
 
 # 人格蒸馏型 Agent 的色标独立配置
+# 色值与 REFERENCE.md / persona-template.md / persona-details.md 约定一致：人格型紫色系 #8E44AD
 persona:
   default:
-    primary: "#1abc9c"
-    secondary: "#16a085"
-    label: "青绿色系 - 人格鲜明"
+    primary: "#8E44AD"
+    secondary: "#9b59b6"
+    label: "紫色系 - 人格鲜明"
